@@ -51,3 +51,39 @@ const produtos = [
         "EstoqueMinimo": 5
     }
 ]
+
+const departamentos = [
+    {
+        "idDep": 1,
+        "Descricao": "Sec. Educação",
+        "responsavel": "José"
+    },
+    {
+        "idDep": 2,
+        "Descricao": "Sec. do Trabalhoro",
+        "responsavel": "Menino feio"
+    },
+    {
+        "idDep": 3,
+        "Descricao": "NAI",
+        "responsavel": "Joana Like"
+    },
+]
+
+const funcionarios = [
+    {
+        "idFunc": 1,
+        "Descricao": "Rafael",
+        "cargo": "CEO"
+    },
+    {
+        "idFunc": 2,
+        "Descricao": "João",
+        "cargo": "Zelador"
+    },
+    {
+        "idFunc": 3,
+        "Descricao": "Lúcifer",
+        "cargo": "Secretário"
+    },
+]

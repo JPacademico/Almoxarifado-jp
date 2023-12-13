@@ -18,56 +18,56 @@
             <div class="dadosPrincipais">
                 <div class="titulo">
                     <span>Dados Principais | Requisição Nº </span>
-                    <input type="number" id="inpNumero">
+                    <input type="text" id="inpNumero" data-obg="true">
                 </div>
                 <div class="camposPrincipais">
                     <div class="camposPrincipaisLinha1 linhasCampos">
                         <div class="grupo1 grupoInput">
                             <span>ID.</span>
-                            <input type="number" id="idDepartamento">
+                            <input type="text" id="idDepartamento" data-obg="true">
                         </div>
                         <div class="grupo2 grupoInput">
                             <span>Departamento</span>
-                            <input type="text" id="departamento">
+                            <input type="text" id="departamento" data-obg="true">
                         </div>
                         <div class="grupo3 grupoInput">
                             <span>Data</span>
-                            <input type="date" id="dataRequisicao">
+                            <input type="date" id="dataRequisicao" data-obg="true">
                         </div>
                     </div>
                     <div class="camposPrincipaisLinha2 linhasCampos">
                         <div class="grupo4 grupoInput">
                             <span>ID Func.</span>
-                            <input type="number" id="idFuncionario">
+                            <input type="text" id="idFuncionario" data-obg="true">
                         </div>
                         <div class="grupo5 grupoInput">
                             <span>Nome Funcionário</span>
-                            <input type="text" id="NomeFuncionario">
+                            <input type="text" id="NomeFuncionario" data-obg="true">
                         </div>
                         <div class="grupo6 grupoInput">
                             <span>Cargo</span>
-                            <input type="text" id="cargo">
+                            <input type="text" id="cargo" data-obg="true">
                         </div>
                     </div>
                     <div class="camposPrincipaisLinha3 linhasCampos">
                         <div class="grupo7 grupoInput">
                             <span>Categoria Motivo</span>  
                             <div class="grupoCategoria">                                                         
-                                <select id="categoriaMotivo"></select>
+                                <select id="categoriaMotivo" data-obg="true"></select>
                                 <img class="btnAdd" src="/assets/img/add.svg" alt="">
                             </div>
                         </div>
                         <div class="grupo8 grupoInput">
                             <span>Motivo</span> 
                             <div class="grupoMotivo"> 
-                                <select id="Motivo"></select>
+                                <select id="Motivo" data-obg="true"></select>
                                 <img class="btnAdd" src="/assets/img/add.svg" alt="">
                             </div>                            
                    
                         </div>
                         <div class="grupo9 grupoInput">
                             <span>Nível de Prioridade</span>
-                            <div class="radioPrioridade">
+                            <div class="radioPrioridade" id="radioPrioridade">
                                 <div class="grupoPrioridade">
                                     <input class="chkPrioridade" type="radio" name="prioridade" id="urgente">
                                     <span>Urgente</span>
@@ -132,6 +132,7 @@
                     <div class="tabelaItens">
                         Criar a tabela aqui
                     </div>
+                    <button type="submit" class="btn-gravar" onclick="clicarGravar()">Gravar</button>
                 </div>
             </div>
     
