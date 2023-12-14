@@ -71,6 +71,7 @@
 }
 
 
+
 .grupoPrioridade{
     display: flex;
     padding-left: 2px;    
@@ -141,6 +142,7 @@
 
 .tabelaItens{
     margin-top: 10px;
+    
 }
 
 .radioPrioridade{  

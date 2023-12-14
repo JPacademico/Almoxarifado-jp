@@ -9,7 +9,7 @@
 // })
 
 function addColorOnFocus(){
-    const listInput = document.querySelectorAll('input[type=="text"]')
+    const listInput = document.querySelectorAll('input[type="text"]')
     const listSelect = document.querySelectorAll("select")
 
     // listInput[1].style.backgroundColor="#98FB98"
@@ -170,7 +170,35 @@ checkboxesPrioridade.forEach(function(checkbox) {
 });
 }
 
+function apenasNumeros(){
+    const camposNum = document.querySelectorAll('[only-number="true"]')
+}
+
+document.getElementById('dataRequisicao').addEventListener('change', function(){
+    const dataNew = document.getElementById('dataRequisicao').value;
+    const dataAtual = new Date()
+})
+
+document.getElementById('btnInserir').addEventListener('click', function(){
+    const tabelaItens = document.getElementById('tabelaItens')
+    const campoCodigo = document.getElementById('CodigoProtudo')
+    const campoProtudo = document.getElementById('DescricaoProtudo')
+    const campoQtd = document.getElementById('Estoque')
+    //const totalRequisicao = document.getElementById('total')
+
+    const line = document.createElement('tr')
+
+    const tdCodigo = document.createElement('tabelaItens')
+    const tdProtudo = document.createElement('CodigoProtudo')
+    const tdQtd = document.createElement('DescricaoProtudo')
+    const tdUnid = document.createElement('Estoque')
+
+
+})
+
+
 
 addColorOnFocus()
 loadCategorias()
 eventoClickPrioridadeHabilitarCor()
+apenasNumeros()

@@ -6,6 +6,7 @@
     <title>Almoxarifado</title>
     <link rel="stylesheet" href="/assets/css/requisicao.css">
     <link rel="stylesheet" href="/assets/css/inputRequisicao.css">
+    <link rel="stylesheet" href="/assets/css/tabela.css">
 </head>
 <body>
     <div class="menu"></div>
@@ -18,13 +19,13 @@
             <div class="dadosPrincipais">
                 <div class="titulo">
                     <span>Dados Principais | Requisição Nº </span>
-                    <input type="text" id="inpNumero" data-obg="true">
+                    <input type="text" id="inpNumero" data-obg="true" only-number="true">
                 </div>
                 <div class="camposPrincipais">
                     <div class="camposPrincipaisLinha1 linhasCampos">
                         <div class="grupo1 grupoInput">
                             <span>ID.</span>
-                            <input type="text" id="idDepartamento" data-obg="true">
+                            <input type="text" id="idDepartamento" data-obg="true" only-number="true">
                         </div>
                         <div class="grupo2 grupoInput">
                             <span>Departamento</span>
@@ -38,7 +39,7 @@
                     <div class="camposPrincipaisLinha2 linhasCampos">
                         <div class="grupo4 grupoInput">
                             <span>ID Func.</span>
-                            <input type="text" id="idFuncionario" data-obg="true">
+                            <input type="text" id="idFuncionario" data-obg="true" only-number="true">
                         </div>
                         <div class="grupo5 grupoInput">
                             <span>Nome Funcionário</span>
@@ -121,7 +122,7 @@
                             </div>
                             <div class="grupoBtnInserirItens">
                                 <div class="BtnInserirItens">  
-                                    <span>Adicionar</span>
+                                    <span id="btnInserir" >Adicionar</span>
                                 </div>
                             </div>
                        
@@ -129,8 +130,18 @@
                   
                      
                     </div>
-                    <div class="tabelaItens">
-                        Criar a tabela aqui
+                    <div class="tabela">
+                        <table class="tabelaItens">
+                            <tr>
+                                <th>Código</th>
+                                <th>Produto</th>
+                                <th>Qtd</th>
+                                <th>Un.</th>
+                                <th>Preço</th>
+                                <th>Total</th>
+                            </tr>
+
+                        </table>
                     </div>
                     <button type="submit" class="btn-gravar" onclick="clicarGravar()">Gravar</button>
                 </div>

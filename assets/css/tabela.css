@@ -1,0 +1,21 @@
+.tabelaItens{
+    border: 1px solid #a7a7a7;
+    border-collapse: collapse;
+    width: 95%;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight:unset;
+    height: 100%;
+    margin: 0 auto;
+}
+.tabelaItens th{
+    background-color:lightblue; 
+    border-collapse: collapse; 
+    color: black; 
+   border: 1px solid #000000;
+    text-align: left;
+}
+.tabelaItens tr, .tabelaItens td{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
