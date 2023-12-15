@@ -112,6 +112,10 @@
                                 <span>Quantidade</span>
                                 <input type="text" id="Estoque">
                             </div>
+                            <div class="grupoEstoque">
+                                <span>Saida</span>
+                                <input type="text" id="saida">
+                            </div>
                         
                         
                             <div class="grupoStatusEstoque"> 
@@ -132,6 +136,7 @@
                     </div>
                     <div class="tabela">
                         <table class="tabelaItens">
+                            <thead >
                             <tr>
                                 <th>Código</th>
                                 <th>Produto</th>
@@ -139,9 +144,18 @@
                                 <th>Un.</th>
                                 <th>Preço</th>
                                 <th>Total</th>
+                                <th>Remover</th>
                             </tr>
+                            </thead>
+                            <tbody id="tableBody">
+
+                            </tbody>
 
                         </table>
+                        <div class="totalizando">
+                            <span>Total</span>
+                            <input type="text" id="montante" disabled>
+                        </div>
                     </div>
                     <button type="submit" class="btn-gravar" onclick="clicarGravar()">Gravar</button>
                 </div>
@@ -151,6 +165,6 @@
     </div>
 
 <script src="assets/scripts/dados.js"></script>
-<script src="/assets/scripts/main.js"></script>
+<script src="/assets/scripts/main.js" ></script>
 </body>
 </html>

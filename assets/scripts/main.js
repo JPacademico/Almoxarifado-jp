@@ -170,35 +170,82 @@ checkboxesPrioridade.forEach(function(checkbox) {
 });
 }
 
-function apenasNumeros(){
-    const camposNum = document.querySelectorAll('[only-number="true"]')
-}
+// function apenasNumeros(){
+//     const camposNum = document.querySelectorAll('[only-number="true"]')
+// }
 
-document.getElementById('dataRequisicao').addEventListener('change', function(){
-    const dataNew = document.getElementById('dataRequisicao').value;
-    const dataAtual = new Date()
-})
+// document.getElementById('dataRequisicao').addEventListener('change', function(){
+//     const dataNew = document.getElementById('dataRequisicao').value;
+//     const dataAtual = new Date()
+// })
+const somatorio = document.getElementById('montante')
+somatorio.value = 0;
 
 document.getElementById('btnInserir').addEventListener('click', function(){
-    const tabelaItens = document.getElementById('tabelaItens')
-    const campoCodigo = document.getElementById('CodigoProtudo')
-    const campoProtudo = document.getElementById('DescricaoProtudo')
-    const campoQtd = document.getElementById('Estoque')
-    //const totalRequisicao = document.getElementById('total')
+    let tabela = document.getElementById('tableBody')
+    let campoCodigo = document.getElementById('CodigoProtudo')
+    let descricao = document.getElementById('DescricaoProtudo')
+    let estoque = document.getElementById("Estoque")
+    let saida = document.getElementById('saida')
+    
+  
+    let line = document.createElement('tr')
 
-    const line = document.createElement('tr')
+    let tdCodigo = document.createElement('td')
+    let tdProtudo = document.createElement('td')
+    let tdQtd = document.createElement('td')
+    let tdUnid = document.createElement('td')
+    let tdPreco = document.createElement('td')
+    let tdTotal = document.createElement('td')
+    let tdButton = document.createElement('button')
 
-    const tdCodigo = document.createElement('tabelaItens')
-    const tdProtudo = document.createElement('CodigoProtudo')
-    const tdQtd = document.createElement('DescricaoProtudo')
-    const tdUnid = document.createElement('Estoque')
 
 
-})
+    tdButton.setAttribute('class', "btnRemove")
+
+
+    const produtoPesquisado = produtos.filter((e)=>e.idProduto==campoCodigo.value)
+
+    let precoProduto = produtoPesquisado[0].Preco;
+    let soma = produtoPesquisado[0].Preco*saida.value;
+
+
+    tdCodigo.textContent = campoCodigo.value;
+    tdProtudo.textContent = descricao.value;
+    tdQtd.textContent = saida.value;
+    tdUnid.textContent = produtoPesquisado[0].Medida;
+    tdPreco.textContent = precoProduto;
+    tdTotal.textContent = precoProduto * saida.value;
+    tdButton.textContent= "X"
+
+
+    line.appendChild(tdCodigo)
+    line.appendChild(tdProtudo)
+    line.appendChild(tdQtd)
+    line.appendChild(tdUnid)
+    line.appendChild(tdPreco)
+    line.appendChild(tdTotal)
+    line.appendChild(tdButton)
+
+    const colunas = line.getElementsByTagName('td')
+    let lineTotal = colunas[5].innerText
+
+    
+    somatorio.value = parseFloat(somatorio.value) + parseFloat(produtoPesquisado[0].Preco*saida.value);
+
+    tdButton.addEventListener('click', function(){
+        tabela.removeChild(line)
+        somatorio.value = parseFloat(somatorio.value) - parseFloat(lineTotal);
+    });
+
+
+    tabela.appendChild(line)
+
+});
 
 
 
 addColorOnFocus()
 loadCategorias()
 eventoClickPrioridadeHabilitarCor()
-apenasNumeros()
+

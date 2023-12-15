@@ -13,9 +13,20 @@
     border-collapse: collapse; 
     color: black; 
    border: 1px solid #000000;
-    text-align: left;
+    text-align: center;
 }
 .tabelaItens tr, .tabelaItens td{
     border-collapse: collapse;
     border: 1px solid black;
+    text-align: center;
+}
+
+.totalizando{
+    margin-top: 10px;
+}
+
+.btnRemove{
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.473);
+    cursor: pointer;
 }
