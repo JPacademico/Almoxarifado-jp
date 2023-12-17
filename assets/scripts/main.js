@@ -244,6 +244,10 @@ document.getElementById('btnInserir').addEventListener('click', function(){
 });
 
 
+document.getElementById("verde").addEventListener('mouseover', function(){
+    document.getElementById("caixa-info").classList.toggle('mostrar')
+
+});
 
 addColorOnFocus()
 loadCategorias()

@@ -9,7 +9,20 @@
     <link rel="stylesheet" href="/assets/css/tabela.css">
 </head>
 <body>
-    <div class="menu"></div>
+    <div id="caixa-info">
+        <div class="info">
+            <img src="assets/img/green.svg" class="cores" alt="">
+            <p class="info-text">Estoque acima de 10% do Estoque mínimo</p>
+        </div>
+        <div class="info">
+            <img src="assets/img/yellow.svg" class="cores" alt="">
+            <p class="info-text">Estoque abaixo de 10% do Estoque mínimo</p>
+        </div>
+        <div class="info">
+            <img src="assets/img/red.svg" class="cores" alt="">
+            <p class="info-text">Estoque abaixo do Estoque mínimo</p>
+        </div>
+    </div>
 
     <div class="main">
         <div class="header">
@@ -109,7 +122,7 @@
                                 <input type="text" id="DescricaoProtudo">
                             </div>
                             <div class="grupoEstoque">
-                                <span>Quantidade</span>
+                                <span>Estoque</span>
                                 <input type="text" id="Estoque">
                             </div>
                             <div class="grupoEstoque">
@@ -118,9 +131,9 @@
                             </div>
                         
                         
-                            <div class="grupoStatusEstoque"> 
+                            <div class="grupoStatusEstoque" id="verdinho"> 
                                 <div>
-                                    <img src="/assets/img/verde.svg" alt="">
+                                    <img src="/assets/img/verde.svg" id="verde" alt="">
                                 </div>                           
                           
                             </div>
