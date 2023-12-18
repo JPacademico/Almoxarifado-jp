@@ -33,7 +33,7 @@
 .conteudo{
     /* background-color: yellow; */
     padding-top: 3vh;
-    width: 50vw;
+    width: 80%;
     padding-left: 1vw;
     padding-right: 1vw;
     border-color:  #CDCDCD;;
@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 3vh;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .linhasCampos{
     display: flex;
@@ -114,13 +114,14 @@
     
 }
 .linhaAdicionarItens{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: end;        
     padding-top: 2vh;
     padding-bottom: 2vh;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 .grupoStatusEstoque{
     display: flex;

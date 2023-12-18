@@ -22,7 +22,12 @@
 }
 
 .totalizando{
-    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    margin: 10px auto 0 auto;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
 }
 
 .btnRemove{
@@ -39,7 +44,7 @@
     border: 1px solid rgba(255, 166, 0, 0.781);
     border-radius: 8px;
     position: absolute;
-    right: 31%;
+    right: 35%;
     bottom: 42%;
 }
 
@@ -52,7 +57,7 @@
     border: 1px solid rgba(255, 166, 0, 0.781);
     border-radius: 8px;
     position: absolute;
-    right: 31%;
+    right: 35%;
     bottom: 42%;
 }
 

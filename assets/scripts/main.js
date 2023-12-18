@@ -249,6 +249,11 @@ document.getElementById("verde").addEventListener('mouseover', function(){
 
 });
 
+document.getElementById("verde").addEventListener('mouseout', function(){
+    document.getElementById("caixa-info").classList.toggle('mostrar')
+
+});
+
 addColorOnFocus()
 loadCategorias()
 eventoClickPrioridadeHabilitarCor()

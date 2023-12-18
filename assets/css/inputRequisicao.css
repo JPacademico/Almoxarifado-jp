@@ -20,7 +20,8 @@ input, select{
     width: 60px;
 }
 #departamento{
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
 }
 #dataRequisicao{
     width: 120px;
@@ -29,7 +30,8 @@ input, select{
     width: 60px;
 }
 #NomeFuncionario{
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
 }
 #cargo{
     width: 120px;
