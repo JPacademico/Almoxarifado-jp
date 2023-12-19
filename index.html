@@ -38,7 +38,7 @@
                     <div class="camposPrincipaisLinha1 linhasCampos">
                         <div class="grupo1 grupoInput">
                             <span>ID.</span>
-                            <input type="text" id="idDepartamento" data-obg="true" only-number="true">
+                            <input type="text" data-mask="000" id="idDepartamento" data-obg="true" only-number="true">
                         </div>
                         <div class="grupo2 grupoInput">
                             <span>Departamento</span>
@@ -50,15 +50,15 @@
                         </div>
                     </div>
                     <div class="camposPrincipaisLinha2 linhasCampos">
-                        <div class="grupo4 grupoInput">
+                        <div class="grupo1 grupoInput">
                             <span>ID Func.</span>
-                            <input type="text" id="idFuncionario" data-obg="true" only-number="true">
+                            <input type="text" data-mask="000" id="idFuncionario" data-obg="true" only-number="true">
                         </div>
-                        <div class="grupo5 grupoInput">
+                        <div class="grupo2 grupoInput">
                             <span>Nome Funcionário</span>
                             <input type="text" id="NomeFuncionario" data-obg="true">
                         </div>
-                        <div class="grupo6 grupoInput">
+                        <div class="grupo3 grupoInput">
                             <span>Cargo</span>
                             <input type="text" id="cargo" data-obg="true">
                         </div>
@@ -149,7 +149,6 @@
                     </div>
                     <div class="tabela">
                         <table class="tabelaItens">
-                            <thead >
                             <tr>
                                 <th>Código</th>
                                 <th>Produto</th>
@@ -159,14 +158,13 @@
                                 <th>Total</th>
                                 <th>Remover</th>
                             </tr>
-                            </thead>
                             <tbody id="tableBody">
 
                             </tbody>
 
                         </table>
                         <div class="totalizando">
-                            <span>Total</span>
+                            <span>Total: R$</span>
                             <input type="text" id="montante" disabled>
                         </div>
                     </div>
@@ -179,5 +177,7 @@
 
 <script src="assets/scripts/dados.js"></script>
 <script src="/assets/scripts/main.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

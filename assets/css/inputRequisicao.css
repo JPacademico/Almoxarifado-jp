@@ -8,7 +8,7 @@ input, select{
 
 
 :checked{
-    transition-duration: 500ms;  
+    transition-duration: 300ms;  
     width: 20px;
     height: 20px;
 }
@@ -17,30 +17,49 @@ input, select{
     font-size: 16px;
 }
 #idDepartamento{
-    width: 60px;
+    max-width: 120px;
+    width: 100%;
+}
+.grupo1 {
+    max-width: 100px;
+    width: 100%;
 }
 #departamento{
     max-width: 450px;
     width: 100%;
 }
+.grupo2 {
+    max-width: 240px;
+    width: 100%;
+
+}
 #dataRequisicao{
     width: 120px;
 }
 #idFuncionario{
-    width: 60px;
+    max-width: 120px;
+    width: 100%;
 }
 #NomeFuncionario{
     max-width: 450px;
     width: 100%;
 }
 #cargo{
-    width: 120px;
+    max-width: 120px;
+    width: 100%;
 }
 #categoriaMotivo{
-    width: 130px;
+    max-width: 130px;
+    width: 100%;
+}
+
+.grupo8 {
+    max-width: 130px;
+    width: 100%;
 }
 #Motivo{
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
 }
 .grupo9{
     width: 250px;
@@ -59,14 +78,17 @@ input, select{
 }
 
 .grupoProdutoDescricao{
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     margin-right: 5px;
 }
 .grupoProdutoDescricao input{
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
 }
 .grupoEstoque{
-    width: 80px;
+    max-width: 80px;
+    width: 100%;
 }
 .grupoEstoque input{
     width: 80px;
@@ -117,17 +139,17 @@ input, select{
 }
 
 #urgente:checked{
-    border: 1px solid red;      
+    border: 1px solid rgb(0, 0, 0);      
     background-color: red;
-    transform: scale(1.1);
+    
 }
 #medio:checked{
-    border: 1px solid yellow;      
+    border: 1px solid rgb(0, 0, 0);      
     background-color: yellow;
-    transform: scale(1.1);    
+    
 }
 #baixo:checked{
-    border: 1px solid green;      
+    border: 1px solid rgb(0, 0, 0);      
     background-color: green;
-    transform: scale(1.1);
+   
 }

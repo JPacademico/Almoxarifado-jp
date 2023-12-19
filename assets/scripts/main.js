@@ -179,7 +179,8 @@ checkboxesPrioridade.forEach(function(checkbox) {
 //     const dataAtual = new Date()
 // })
 const somatorio = document.getElementById('montante')
-somatorio.value = 0;
+let coisa = 0
+somatorio.value = coisa.toFixed(2);
 
 document.getElementById('btnInserir').addEventListener('click', function(){
     let tabela = document.getElementById('tableBody')
@@ -229,13 +230,17 @@ document.getElementById('btnInserir').addEventListener('click', function(){
 
     const colunas = line.getElementsByTagName('td')
     let lineTotal = colunas[5].innerText
+ 
 
+    let coisa = parseFloat(somatorio.value) + parseFloat(produtoPesquisado[0].Preco*saida.value);
+    somatorio.value = coisa.toFixed(2)
     
-    somatorio.value = parseFloat(somatorio.value) + parseFloat(produtoPesquisado[0].Preco*saida.value);
 
     tdButton.addEventListener('click', function(){
         tabela.removeChild(line)
-        somatorio.value = parseFloat(somatorio.value) - parseFloat(lineTotal);
+        let coisa = parseFloat(somatorio.value) - parseFloat(lineTotal);
+        somatorio.value = coisa.toFixed(2)
+
     });
 
 
