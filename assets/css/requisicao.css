@@ -138,7 +138,7 @@
     height: 30px;
 }
 .grupoBtnInserirItens{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;  
     margin-left: 5px; 

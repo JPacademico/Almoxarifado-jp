@@ -39,6 +39,7 @@ function addColorOnFocus(){
 function loadCategorias(){
     const selectCategoria = document.getElementById('categoriaMotivo');
     selectCategoria.innerHTML="";
+
   
     const optFirst = document.createElement('option');
     optFirst.value=-1;
@@ -54,6 +55,8 @@ function loadCategorias(){
         selectCategoria.add(opt);
     })
 
+    
+
 }
 
 function loadMotivos(){
@@ -64,15 +67,24 @@ function loadMotivos(){
     optFirst.text="";
     selectMotivo.add(optFirst);
     const valorCategoria = document.getElementById('categoriaMotivo').value;
-    const motivoFiltrado = motivos.filter((item) => item.idCategoria==valorCategoria);
+    if(valorCategoria != "-1"){
+        const motivoFiltrado = motivos.filter((item) => item.idCategoria==valorCategoria);
+        selectMotivo.disabled = false;
+        selectMotivo.style.backgroundColor = "white";
 
-    motivoFiltrado.forEach(function(motivo){
-        var opt = document.createElement('option');
-        opt.value = motivo.idMotivo;
-        opt.text = motivo.Descricao;
-       
-        selectMotivo.add(opt);
-    })
+        motivoFiltrado.forEach(function(motivo){
+            var opt = document.createElement('option');
+            opt.value = motivo.idMotivo;
+            opt.text = motivo.Descricao;
+           
+            selectMotivo.add(opt);
+        })
+
+    } else {
+        selectMotivo.disabled = true;
+        selectMotivo.style.backgroundColor = "rgba(239, 239, 239, 0.3)";
+    }
+   
 }
 
 document.getElementById('categoriaMotivo').addEventListener('change', function(){
@@ -87,12 +99,31 @@ document.getElementById('CodigoProtudo').addEventListener("keyup",function(){
     if (produtoFiltrado.length>0){
         document.getElementById('DescricaoProtudo').value=produtoFiltrado[0].Descricao;
         document.getElementById('Estoque').value=produtoFiltrado[0].Estoque;
+        document.getElementById("saida").disabled = false;
+        if(document.getElementById('Estoque').value > 10){
+            document.getElementById
+        }
 
     }else{
         document.getElementById('DescricaoProtudo').value="";
         document.getElementById('Estoque').value="";
     }
 
+});
+
+let saidaElement = document.getElementById("saida");
+
+saidaElement.addEventListener("blur", function(){
+    console.log("dia bom")
+    if(parseInt(saidaElement.value) != 0 && 
+    parseInt(document.getElementById('Estoque').value) >= parseInt(saidaElement.value)
+){
+        document.querySelector(".grupoBtnInserirItens").style.display = "flex"
+
+    }
+    else{
+        document.querySelector(".grupoBtnInserirItens").style.display = "none"
+    }
 });
 
 document.getElementById('idDepartamento').addEventListener("keyup",function(){
@@ -209,6 +240,7 @@ document.getElementById('btnInserir').addEventListener('click', function(){
 
     let precoProduto = produtoPesquisado[0].Preco;
     let soma = produtoPesquisado[0].Preco*saida.value;
+    produtoPesquisado[0].Estoque -= saida.value;
 
 
     tdCodigo.textContent = campoCodigo.value;
@@ -239,12 +271,18 @@ document.getElementById('btnInserir').addEventListener('click', function(){
     tdButton.addEventListener('click', function(){
         tabela.removeChild(line)
         let coisa = parseFloat(somatorio.value) - parseFloat(lineTotal);
+        produtoPesquisado[0].Estoque += parseInt(line.childNodes[2].textContent);
         somatorio.value = coisa.toFixed(2)
 
     });
 
 
     tabela.appendChild(line)
+
+    saida.value = "";
+    descricao.value = "";
+    campoCodigo.value = "";
+    estoque.value = "";
 
 });
 
@@ -258,6 +296,9 @@ document.getElementById("verde").addEventListener('mouseout', function(){
     document.getElementById("caixa-info").classList.toggle('mostrar')
 
 });
+
+
+
 
 addColorOnFocus()
 loadCategorias()

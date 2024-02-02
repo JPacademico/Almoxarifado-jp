@@ -35,16 +35,16 @@ const produtos = [
     {
         "idProduto": 1,
         "Descricao": "Tijolo",
-        "Estoque": 10,
-        "EstoqueMinimo": 5,
+        "Estoque": 12,
+        "EstoqueMinimo": 10,
         "Preco" : 10.00,
         "Medida": "Unid"
     },
     {
         "idProduto": 2,
         "Descricao": "Madeira",
-        "Estoque": 4,
-        "EstoqueMinimo": 5,
+        "Estoque": 9,
+        "EstoqueMinimo": 10,
         "Preco" : 12.00,
         "Medida": "Unid"
     },
@@ -52,7 +52,7 @@ const produtos = [
         "idProduto": 3,
         "Descricao": "Vidro",
         "Estoque": 8,
-        "EstoqueMinimo": 5,
+        "EstoqueMinimo": 10,
         "Preco" : 16.00,
         "Medida": "Unid"
     }

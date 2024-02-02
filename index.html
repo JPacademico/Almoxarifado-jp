@@ -32,7 +32,7 @@
             <div class="dadosPrincipais">
                 <div class="titulo">
                     <span>Dados Principais | Requisição Nº </span>
-                    <input type="text" id="inpNumero" data-obg="true" only-number="true">
+                    <input type="text" data-mask="000" id="inpNumero" data-obg="true" only-number="true">
                 </div>
                 <div class="camposPrincipais">
                     <div class="camposPrincipaisLinha1 linhasCampos">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="grupo2 grupoInput">
                             <span>Departamento</span>
-                            <input type="text" id="departamento" data-obg="true">
+                            <input type="text" id="departamento" data-obg="true" disabled>
                         </div>
                         <div class="grupo3 grupoInput">
                             <span>Data</span>
@@ -56,11 +56,11 @@
                         </div>
                         <div class="grupo2 grupoInput">
                             <span>Nome Funcionário</span>
-                            <input type="text" id="NomeFuncionario" data-obg="true">
+                            <input type="text" id="NomeFuncionario" data-obg="false" disabled>
                         </div>
                         <div class="grupo3 grupoInput">
                             <span>Cargo</span>
-                            <input type="text" id="cargo" data-obg="true">
+                            <input type="text" id="cargo" data-obg="true" disabled>
                         </div>
                     </div>
                     <div class="camposPrincipaisLinha3 linhasCampos">
@@ -74,7 +74,7 @@
                         <div class="grupo8 grupoInput">
                             <span>Motivo</span> 
                             <div class="grupoMotivo"> 
-                                <select id="Motivo" data-obg="true"></select>
+                                <select id="Motivo" data-obg="true" disabled></select>
                                 <img class="btnAdd" src="/assets/img/add.svg" alt="">
                             </div>                            
                    
@@ -115,19 +115,19 @@
                         
                             <div class="grupoProduto">
                                 <span>Cod. Produto</span>
-                                <input type="text" id="CodigoProtudo">
+                                <input data-mask="000" type="text" id="CodigoProtudo">
                             </div>
                             <div class="grupoProdutoDescricao">
                                 <span>Descrição</span>
-                                <input type="text" id="DescricaoProtudo">
+                                <input type="text" id="DescricaoProtudo" disabled>
                             </div>
                             <div class="grupoEstoque">
                                 <span>Estoque</span>
-                                <input type="text" id="Estoque">
+                                <input type="text" id="Estoque" disabled>
                             </div>
                             <div class="grupoEstoque">
                                 <span>Saida</span>
-                                <input type="text" id="saida">
+                                <input type="text" data-mask="000" id="saida" disabled>
                             </div>
                         
                         

@@ -121,6 +121,10 @@ input, select{
     font-size: 14px;
 }
 
+#Motivo {
+    background-color: rgba(239, 239, 239, 0.3);
+}
+
 .chkPrioridade{
     appearance: none;
     width: 20px;
