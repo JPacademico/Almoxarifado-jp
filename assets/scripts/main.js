@@ -107,6 +107,9 @@ document.getElementById('CodigoProtudo').addEventListener("keyup",function(){
     }else{
         document.getElementById('DescricaoProtudo').value="";
         document.getElementById('Estoque').value="";
+        document.getElementById("saida").disabled = true;
+        document.getElementById("saida").style.backgroundColor = "#EFEFEF4D";
+        document.getElementById("saida").value = "";
     }
 
 });
@@ -280,6 +283,8 @@ document.getElementById('btnInserir').addEventListener('click', function(){
     tabela.appendChild(line)
 
     saida.value = "";
+    saida.disabled = true;
+    saida.style.backgroundColor = "#EFEFEF4D";
     descricao.value = "";
     campoCodigo.value = "";
     estoque.value = "";
