@@ -117,10 +117,11 @@ document.getElementById('CodigoProtudo').addEventListener("keyup",function(){
 let saidaElement = document.getElementById("saida");
 
 saidaElement.addEventListener("blur", function(){
-    console.log("dia bom")
+    
     if(parseInt(saidaElement.value) != 0 && 
     parseInt(document.getElementById('Estoque').value) >= parseInt(saidaElement.value)
 ){
+        console.log("dia bom")
         document.querySelector(".grupoBtnInserirItens").style.display = "flex"
 
     }
@@ -289,7 +290,7 @@ document.getElementById('btnInserir').addEventListener('click', function(){
     campoCodigo.value = "";
     estoque.value = "";
 
-    document.querySelector('.BtnInserirItens').style.display = "none"
+    document.querySelector('.grupoBtnInserirItens').style.display = "none"
 
 });
 
