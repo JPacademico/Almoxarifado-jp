@@ -289,6 +289,8 @@ document.getElementById('btnInserir').addEventListener('click', function(){
     campoCodigo.value = "";
     estoque.value = "";
 
+    document.querySelector('.BtnInserirItens').style.display = "none"
+
 });
 
 
