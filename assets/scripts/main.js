@@ -100,8 +100,14 @@ document.getElementById('CodigoProtudo').addEventListener("keyup",function(){
         document.getElementById('DescricaoProtudo').value=produtoFiltrado[0].Descricao;
         document.getElementById('Estoque').value=produtoFiltrado[0].Estoque;
         document.getElementById("saida").disabled = false;
-        if(document.getElementById('Estoque').value > 10){
-            document.getElementById
+        if(document.getElementById('Estoque').value >= produtoFiltrado[0].EstoqueMinimo + (produtoFiltrado[0].EstoqueMinimo * 0.1)){
+            document.getElementById('verde').src = 'assets/img/green.svg'
+        }
+        if(document.getElementById('Estoque').value < produtoFiltrado[0].EstoqueMinimo + (produtoFiltrado[0].EstoqueMinimo * 0.1) && document.getElementById('Estoque').value >= produtoFiltrado[0].EstoqueMinimo){
+            document.getElementById('verde').src = 'assets/img/yellow.svg'
+        }
+        if(document.getElementById('Estoque').value < produtoFiltrado[0].EstoqueMinimo){
+            document.getElementById('verde').src = 'assets/img/red.svg'
         }
 
     }else{

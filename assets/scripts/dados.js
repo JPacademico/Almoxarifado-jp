@@ -43,7 +43,7 @@ const produtos = [
     {
         "idProduto": 2,
         "Descricao": "Madeira",
-        "Estoque": 9,
+        "Estoque": 10,
         "EstoqueMinimo": 10,
         "Preco" : 12.00,
         "Medida": "Unid"
